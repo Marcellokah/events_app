@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const EventPage = ({ data }) => {
     return (
-        <div>
+        <div className='event_single_page'>
             <Image src={data.image} alt={data.title} width={300} height={200} />
             <h1>{data.title}</h1>
             <p>{data.description}</p>

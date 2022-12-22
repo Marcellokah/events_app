@@ -3,11 +3,11 @@ import Link from 'next/link';
 
 const EventsCatPage = ({ data, pageName }) => {
     return (
-        <div>
+        <div className='cat_events'>
             <h1>Events in {pageName}</h1>
-            <div>
+            <div className='content'>
                 {data.map((ev) => (
-                    <Link key={ev.id} href={`/events/${ev.city}/${ev.id}`} passHref={true}>
+                    <Link className='card' key={ev.id} href={`/events/${ev.city}/${ev.id}`} passHref={true}>
                         <Image src={ev.image} alt={ev.title} width={300} height={200} />
                         <h2>{ev.title}</h2>
                         <p>{ev.description}</p>
